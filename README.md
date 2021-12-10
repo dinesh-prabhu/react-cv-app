@@ -1,2 +1,2 @@
 # react-cv-app
-The Odin project's react CV application project
+Repository for The Odin Project's React CV Application Project 
