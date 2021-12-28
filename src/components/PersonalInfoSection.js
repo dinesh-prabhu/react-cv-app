@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import InputElement from "./common/input-element";
+import InputElement from "./common/InputElement";
 
 function PersonalInfoSection(props) {
     const [personalInfo, setPersonalInfo] = useState({});
