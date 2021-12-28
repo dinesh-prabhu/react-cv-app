@@ -19,7 +19,6 @@ function App() {
         });
     };
     const removeFormFieldData = (fieldName, index) => {
-        debugger;
         setFormData({ ...formData, [fieldName]: formData[fieldName].filter((_data, i) => i !== index) });
     }
 
@@ -36,7 +35,7 @@ function App() {
             <h1 className="app-header">CV App</h1>
             <CVForm setFormFieldData={setFormFieldData} removeFormFieldData={removeFormFieldData} 
                 submitHandler={submitHandler} showCVForm={!hideCVForm} />
-            <CVPreview {...formData} showCVPreview={hideCVForm} />
+            <CVPreview {...formData} showCVPreview={hideCVForm} togglePreview={toggleCVForm} />
         </div>
     );
 }

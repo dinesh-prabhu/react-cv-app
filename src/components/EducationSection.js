@@ -11,7 +11,6 @@ function EducationSection(props) {
     };
     useEffect(() => {
         props.setFormData("educationInfo", educationInfo, props.index);
-        // return () => props.removeFormData("educationInfo", props.index);
     }, [educationInfo]);
     return <div className="eductaion-container">
         <InputElement type="text" label="University or School Name" name="univName" id={"univName_" + props.index} className="input-field" setFieldData={setEducationalFieldData} />

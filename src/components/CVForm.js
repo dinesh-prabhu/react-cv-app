@@ -22,7 +22,7 @@ function CVForm({setFormFieldData, removeFormFieldData, submitHandler, showCVFor
         setWorkList(workList.splice(0, workList.length - 1));
     }
 
-    return (showCVForm && <form className="cv-form" onSubmit={submitHandler}>
+    return (<form className={`cv-form ${showCVForm ? "" : "hide"}`} onSubmit={submitHandler}>
         <h2 className="section-header">Personal Info</h2>
         <PersonalInfoSection setFormData={setFormFieldData} />
         <h2 className="section-header">Education</h2>

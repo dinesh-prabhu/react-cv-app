@@ -26,6 +26,14 @@
     flex-basis: 48%;
     position: relative;
 }
+.text-area-group {
+    flex-basis: 98%;
+}
+.text-area-group > .input-field {
+   resize: none;
+   width: 98%;
+   height: 70px;
+}
 .input-field {
     padding: 5px;
     width: 95%;
@@ -39,6 +47,7 @@
 }
 
 .form-group > input:focus + .floating-label,
+.form-group > textarea:focus + .floating-label,
 .floating-label-focused {
     transform: translate(-8px, -180%);
     color: #000;
@@ -83,7 +92,7 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 .cv-preview-left {
-    width: 250px;
+    max-width: 250px;
     background-color: #666666;
     color: #fff;
     padding: 10px;

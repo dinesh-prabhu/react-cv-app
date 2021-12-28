@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import InputElement from "./common/InputElement";
+import TextArea from "./common/TextArea";
 
 function PersonalInfoSection(props) {
     const [personalInfo, setPersonalInfo] = useState({});
@@ -18,6 +19,7 @@ function PersonalInfoSection(props) {
             <InputElement type="text" label="Last Name" name="lastName" className="input-field" setFieldData={setPersonalFieldData} />
             <InputElement type="email" label="Email" name="email" className="input-field" setFieldData={setPersonalFieldData} />
             <InputElement type="tel" label="Phone Number" name="phoneNumber" className="input-field" setFieldData={setPersonalFieldData} />
+            <TextArea label="Description" name="description" className="input-field" setFieldData={setPersonalFieldData} />
         </div>
     );
 }

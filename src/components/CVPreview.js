@@ -9,17 +9,17 @@ function getDateString(dateStr) {
     return parsedDate.toLocaleDateString("default", dateFormatOptions);
 }
 
-function CVPreview({educationInfo, personalInfo, workInfo, showCVPreview}) {
-    return (showCVPreview && <div className="cv-preview-container">
+function CVPreview({educationInfo, personalInfo, workInfo, showCVPreview, togglePreview}) {
+    const editOnClickHandler = () => {
+        togglePreview(!showCVPreview);
+    };
+    return (showCVPreview && <><div className="cv-preview-container">
         <div className="cv-preview-left">
             <div className="image-container">
                 <img src={"Portrait_Placeholder.png"} alt="Placeholder potrait" className="placeholder-image" />
             </div>
             <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio orci, ultricies ac tellus nec, volutpat eleifend dolor. 
-                Nulla sit amet posuere arcu. Nulla quis efficitur nisi. Curabitur fermentum ultricies nibh vel efficitur. 
-                In nec orci eros. Morbi dictum commodo luctus. Duis pulvinar elementum sem, quis ornare sem hendrerit eget. 
-                Duis aliquam finibus ex eget tristique.</p>
+            <p>{personalInfo.description}</p>
         </div>
         <div className="cv-preview-right">
             <div className="info-grp">
@@ -36,6 +36,7 @@ function CVPreview({educationInfo, personalInfo, workInfo, showCVPreview}) {
                             <h3 className="display-name">{info.companyName}</h3>
                             <p>{info.roleOrPosition}</p>
                             <p>{getDateString(info.workFrom)} - {getDateString(info.workTo)}</p>
+                            <p>{info.description}</p>
                         </div>;
                 })
             }
@@ -51,6 +52,9 @@ function CVPreview({educationInfo, personalInfo, workInfo, showCVPreview}) {
                 })
             }
         </div>
-    </div>);
+    </div>
+    <div className="submit-btn-grp">
+        <button className="btn submit-btn" onClick={editOnClickHandler}>Edit</button>
+    </div></>);
 }
 export default CVPreview;
