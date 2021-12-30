@@ -26,8 +26,8 @@ function App() {
 
     function submitHandler(e) {
         e.preventDefault();
-        console.log(formData);
         toggleCVForm(!hideCVForm);
+        document.querySelector(".app-header").scrollIntoView({behavior: "smooth", block: "end"});
     }
 
     return (
