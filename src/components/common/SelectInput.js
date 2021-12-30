@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function SelectInput(props) {
-    const[fieldValue, setFieldValue] = useState("");
+    const[fieldValue, setFieldValue] = useState(props.options[0]);
 
     const inputChangeHandler = (e) => {
         setFieldValue(e.target.value);
