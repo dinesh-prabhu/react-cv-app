@@ -9,7 +9,7 @@ function getDateString(dateStr) {
     return parsedDate.toLocaleDateString("default", dateFormatOptions);
 }
 
-function CVPreview({educationInfo, personalInfo, workInfo, showCVPreview, togglePreview}) {
+function CVPreview({educationInfo, personalInfo, workInfo, projectInfo, showCVPreview, togglePreview}) {
     const editOnClickHandler = () => {
         togglePreview(!showCVPreview);
     };
@@ -36,6 +36,17 @@ function CVPreview({educationInfo, personalInfo, workInfo, showCVPreview, toggle
                             <h3 className="display-name">{info.companyName}</h3>
                             <p>{info.roleOrPosition}</p>
                             <p>{getDateString(info.workFrom)} - {getDateString(info.workTo)}</p>
+                            <p>{info.description}</p>
+                        </div>;
+                })
+            }
+            <hr/>
+            <h2>Projects</h2>
+            {
+                projectInfo.map((info, index) => { 
+                    return <div className="info-grp projects-preview" key={index}>
+                            <h3 className="display-name">{info.ProjectName}</h3>
+                            <p>{info.projectType}</p>
                             <p>{info.description}</p>
                         </div>;
                 })

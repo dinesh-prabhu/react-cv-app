@@ -16,7 +16,7 @@ function ProjectSection(props) {
     useEffect(() => {
         props.setFormData("projectInfo", projectInfo, props.index);
     }, [projectInfo]);
-    return <div className="project-container">
+    return <div className="info-container">
         <InputElement type="text" label="Project Name" name="ProjectName" id={"ProjectName_" + props.index} className="input-field" setFieldData={setProjectFieldData} />
         <SelectInput label="Project Type" name="projectType" id={"projectType_" + props.index} className="input-field" 
             options={PROJECT_TYPES} setFieldData={setProjectFieldData} />
