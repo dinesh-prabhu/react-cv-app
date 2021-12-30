@@ -13,7 +13,7 @@ function WorkSection(props) {
     useEffect(() => {
         props.setFormData("workInfo", workInfo, props.index);
     }, [workInfo]);
-    return <div className="work-container">
+    return <div className="info-container">
         <InputElement type="text" label="Company Name" name="companyName" id={"companyName_" + props.index} className="input-field" setFieldData={setWorkFieldData} />
         <InputElement type="text" label="Role or Position" name="roleOrPosition" id={"roleOrPosition_" + props.index} className="input-field" setFieldData={setWorkFieldData} />
         <InputElement type="month" label="From" name="workFrom" id={"workFrom_" + props.index} className="input-field" labelFocused={true} setFieldData={setWorkFieldData} />

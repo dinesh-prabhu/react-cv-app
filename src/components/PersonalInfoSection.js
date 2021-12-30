@@ -14,7 +14,7 @@ function PersonalInfoSection(props) {
         props.setFormData("personalInfo", personalInfo, null);
     }, [personalInfo]);
     return (
-        <div className="personal-info-container">
+        <div className="info-container">
             <InputElement type="text" label="First Name" name="firstName" className="input-field" setFieldData={setPersonalFieldData} />
             <InputElement type="text" label="Last Name" name="lastName" className="input-field" setFieldData={setPersonalFieldData} />
             <InputElement type="email" label="Email" name="email" className="input-field" setFieldData={setPersonalFieldData} />
